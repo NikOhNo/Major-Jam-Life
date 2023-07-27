@@ -44,4 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b06694670d6ca04bbf7823557f1b586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventSystemPrefab: {fileID: 5641538882695284488, guid: 3174fa778bcbb23488dbfd0071b8deea, type: 3}
+  sceneLoaderPrefab: {fileID: 8841064065358846767, guid: 98fa48d56b2a7784a89aef59a9a41ac7, type: 3}
   gameplayCanvasPrefab: {fileID: 3901288080581823692, guid: f1626a37c998e0243afd5bca6616de3f, type: 3}

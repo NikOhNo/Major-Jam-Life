@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 using System.Linq;
 using System.Globalization;
 using Assets.Scripts;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     // Serialized fields
+    [SerializeField]
+    GameObject eventSystemPrefab;
+
+    [SerializeField]
+    GameObject sceneLoaderPrefab;
+
     [SerializeField]
     GameObject gameplayCanvasPrefab;
 
@@ -51,10 +58,18 @@ public class GameManager : MonoBehaviour
         scoreManager = new ScoreManager();
     }
 
+    /// <summary>
+    /// What to do when a scene has been loaded
+    /// </summary>
+    /// <param name="scene"></param>
+    /// <param name="mode"></param>
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        string levelNumber = new string(scene.name.TakeWhile(c => char.IsDigit(c)).ToArray());
+        // Create objects if they're missing in scene
+        AddMissingObjects();
 
+        // Determine if a level was loaded
+        string levelNumber = new string(scene.name.TakeWhile(c => char.IsDigit(c)).ToArray());
         if (int.TryParse(levelNumber, NumberStyles.Integer, CultureInfo.InvariantCulture, out int result))
         {
             Debug.Log($"Loaded Level: {result}");
@@ -67,9 +82,27 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void AddMissingObjects()
+    {
+        if (FindObjectOfType<EventSystem>() == null)
+        {
+            Instantiate(eventSystemPrefab);
+        }
+
+        if (FindObjectOfType<SceneLoader>() == null)
+        {
+            Instantiate(sceneLoaderPrefab);
+        }
+    }
+
     private void CreateLevel()
     {
         gameplayCanvas = Instantiate(gameplayCanvasPrefab).GetComponent<GameplayCanvas>();
-        gameplayCanvas.Initialize(scoreManager);
+        ApplicationInfo levelApplication = FindObjectOfType<ApplicationInfo>();
+        if (levelApplication == null) 
+        {
+            Debug.LogError("Could not find application for level");
+        }
+        gameplayCanvas.Initialize(scoreManager, levelApplication);
     }
 }

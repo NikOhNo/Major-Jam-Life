@@ -1,3 +1,4 @@
+using Assets.Scripts.Gameplay;
 using Assets.Scripts.Systems;
 using System;
 using System.Collections;
@@ -13,6 +14,12 @@ namespace Assets.Scripts
         [SerializeField]
         ScoreDisplay scoreDisplay;
 
+        [SerializeField]
+        ApplicationDisplay applicationDisplay;
+
+        [SerializeField]
+        ApplicantDisplay characterDisplay;
+
         // Cached References
         CanvasGroup canvasGroup;
 
@@ -21,7 +28,7 @@ namespace Assets.Scripts
             canvasGroup = GetComponent<CanvasGroup>();
         }
 
-        public void Initialize(ScoreManager scoreManager)
+        public void Initialize(ScoreManager scoreManager, ApplicationInfo applicationInfo)
         {
             if (scoreManager == null)
             {
@@ -30,6 +37,8 @@ namespace Assets.Scripts
 
             scoreManager.ScoreChanged.AddListener(scoreDisplay.UpdateScore);
             scoreDisplay.UpdateScore(scoreManager.Score);
+            characterDisplay.Initialize(applicationInfo.ApplicantInfo);
+            characterDisplay.ShowDisplay();
         }
 
         public void SetInteractable(bool enabled)

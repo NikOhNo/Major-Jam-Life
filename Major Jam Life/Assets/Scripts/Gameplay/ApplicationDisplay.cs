@@ -7,6 +7,9 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Animator), typeof(Image), typeof(CanvasGroup))]
 public class ApplicationDisplay : MonoBehaviour, IDisplay
 {
+    public GameObject descriptionButton;
+    public GameObject descriptionLocation;
+
     Animator animator;
     Image image;
     CanvasGroup canvasGroup;
@@ -28,6 +31,11 @@ public class ApplicationDisplay : MonoBehaviour, IDisplay
     public void ShowApplication()
     {
         animator.SetBool("Open", true);
+
+        for ( int i = 0; i < 4; i++ )
+        {
+            Instantiate(descriptionButton, descriptionLocation.transform);
+        }
     }
 
     public void HideApplication()

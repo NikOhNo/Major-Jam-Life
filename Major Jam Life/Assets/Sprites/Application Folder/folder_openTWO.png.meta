@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ab5861b7c2997f94e946c0432b20ec8b
+guid: 3aad1cb17ed59aa45a458b6109ce4af0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -149,7 +149,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: folder_open_sprsht_0
+      name: folder_openTWO_0
       rect:
         serializedVersion: 2
         x: 0
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 723a3caa1a9bc984b926a0a3381e4b91
-      internalID: -80894986
+      spriteID: 4e6039aab63507e42bd04e530856fe3a
+      internalID: 525785293
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: folder_open_sprsht_1
+      name: folder_openTWO_1
       rect:
         serializedVersion: 2
         x: 384
@@ -184,14 +184,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e813e099801db54abf62ac89f3c92ab
-      internalID: -1339810274
+      spriteID: 064e6660dadf6af49903249df0425c71
+      internalID: -981391297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: folder_open_sprsht_2
+      name: folder_openTWO_2
       rect:
         serializedVersion: 2
         x: 768
@@ -205,14 +205,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ae2e2afe7d08d743a5dc5bad779403e
-      internalID: 246051548
+      spriteID: 4638fa7ea4fde484e9a76abcdb19cb34
+      internalID: 1444882885
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: folder_open_sprsht_3
+      name: folder_openTWO_3
       rect:
         serializedVersion: 2
         x: 1152
@@ -226,14 +226,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fb255e77743d20409f6005ea2c4e58f
-      internalID: -1946237729
+      spriteID: 0d6c9012d304a9546bc9011a1cf93b4c
+      internalID: 322393266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: folder_open_sprsht_4
+      name: folder_openTWO_4
       rect:
         serializedVersion: 2
         x: 1536
@@ -247,14 +247,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ac2b3846f2a23242be445340ce8fa52
-      internalID: -331245051
+      spriteID: 7bec58b206af4574397ea10c50d3548f
+      internalID: 1795099529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: folder_open_sprsht_5
+      name: folder_openTWO_5
       rect:
         serializedVersion: 2
         x: 1920
@@ -268,14 +268,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d078d4a15d70c345b2aaf989f4f0ae8
-      internalID: -857791804
+      spriteID: 1065d1f8dc5de764cabee14ee3cfd6b7
+      internalID: 845701058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: folder_open_sprsht_6
+      name: folder_openTWO_6
       rect:
         serializedVersion: 2
         x: 2304
@@ -289,14 +289,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b635d797cee02c34585ab0e6e088eff7
-      internalID: 1276988340
+      spriteID: 929e2b266024d284d9ddc687f1fd211f
+      internalID: 1350619005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: folder_open_sprsht_7
+      name: folder_openTWO_7
       rect:
         serializedVersion: 2
         x: 2688
@@ -310,14 +310,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a75fe644b83b25f4d9cf9a25f7623113
-      internalID: -887419033
+      spriteID: b2a0e9a14c878404d84ea95df9343b18
+      internalID: -1688818843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: folder_open_sprsht_8
+      name: folder_openTWO_8
       rect:
         serializedVersion: 2
         x: 3072
@@ -331,14 +331,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43be643502079b249bd5b88df62d8deb
-      internalID: 1047637062
+      spriteID: 41e63d26bc266954a849061578246693
+      internalID: -1839534350
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: folder_open_sprsht_9
+      name: folder_openTWO_9
       rect:
         serializedVersion: 2
         x: 3456
@@ -352,14 +352,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7b0c24389acec247ac73b055922abbe
-      internalID: -1989951916
+      spriteID: f9f77cbccf1c5894d99b0ffa2fb08ada
+      internalID: 1003504724
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: folder_open_sprsht_10
+      name: folder_openTWO_10
       rect:
         serializedVersion: 2
         x: 3840
@@ -373,14 +373,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd3b54d0450b20840a7e1a92944a0575
-      internalID: -930705903
+      spriteID: c0576812fa20dd741bc417d6efd15a8b
+      internalID: -668349296
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: folder_open_sprsht_11
+      name: folder_openTWO_11
       rect:
         serializedVersion: 2
         x: 4224
@@ -394,14 +394,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abf857c962db8354c95b6d10ae0b1227
-      internalID: 1601771282
+      spriteID: b5e349aef691f4c4c8827419d65fd8f1
+      internalID: 165539169
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: folder_open_sprsht_12
+      name: folder_openTWO_12
       rect:
         serializedVersion: 2
         x: 4608
@@ -415,14 +415,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47eb7111c00493c4582c5821539bef14
-      internalID: 2040869980
+      spriteID: afd78c4b796fd724fbb04d895e7ca19c
+      internalID: 1553608611
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: folder_open_sprsht_13
+      name: folder_openTWO_13
       rect:
         serializedVersion: 2
         x: 4992
@@ -436,14 +436,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0a3774f89e48c14e85c7d3919e19d52
-      internalID: 1208317254
+      spriteID: e84fb80b95a702648b6495f58a86e980
+      internalID: 1362002167
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: folder_open_sprsht_14
+      name: folder_openTWO_14
       rect:
         serializedVersion: 2
         x: 5376
@@ -457,14 +457,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cc425d55481530438e2437eb1c0723c
-      internalID: 119420231
+      spriteID: 44978fe582ea52e49b19ef5507c48fe8
+      internalID: -439836703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: folder_open_sprsht_15
+      name: folder_openTWO_15
       rect:
         serializedVersion: 2
         x: 5760
@@ -478,14 +478,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18d3bf79835a9134a9d89c69ec7006b6
-      internalID: 1911939041
+      spriteID: bda44e0293be50e459bd99b5e1c51277
+      internalID: -1801335519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: folder_open_sprsht_16
+      name: folder_openTWO_16
       rect:
         serializedVersion: 2
         x: 6144
@@ -499,92 +499,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e01a4a0bd410f64d903b9826404ab0b
-      internalID: -451454359
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: folder_open_sprsht_17
-      rect:
-        serializedVersion: 2
-        x: 6528
-        y: 0
-        width: 384
-        height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6aaa2ca91b5bc9d468b7375dfcdf411b
-      internalID: 181527070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: folder_open_sprsht_18
-      rect:
-        serializedVersion: 2
-        x: 6912
-        y: 0
-        width: 384
-        height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31a93e26ddae0af48bd6ce6a6e6fb49e
-      internalID: -1267007564
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: folder_open_sprsht_19
-      rect:
-        serializedVersion: 2
-        x: 7296
-        y: 0
-        width: 384
-        height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: adc4fd0e514fb874ab77e2e9ba04f887
-      internalID: -1968388666
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: folder_open_sprsht_20
-      rect:
-        serializedVersion: 2
-        x: 7680
-        y: 0
-        width: 384
-        height: 216
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64f7e70a589738d46bb82121af14cdff
-      internalID: -1382464737
+      spriteID: 7a7bdbd25e3ee63449f03c930f96f43c
+      internalID: 1945617178
       vertices: []
       indices: 
       edges: []
@@ -600,27 +516,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      folder_open_sprsht_0: -80894986
-      folder_open_sprsht_1: -1339810274
-      folder_open_sprsht_10: -930705903
-      folder_open_sprsht_11: 1601771282
-      folder_open_sprsht_12: 2040869980
-      folder_open_sprsht_13: 1208317254
-      folder_open_sprsht_14: 119420231
-      folder_open_sprsht_15: 1911939041
-      folder_open_sprsht_16: -451454359
-      folder_open_sprsht_17: 181527070
-      folder_open_sprsht_18: -1267007564
-      folder_open_sprsht_19: -1968388666
-      folder_open_sprsht_2: 246051548
-      folder_open_sprsht_20: -1382464737
-      folder_open_sprsht_3: -1946237729
-      folder_open_sprsht_4: -331245051
-      folder_open_sprsht_5: -857791804
-      folder_open_sprsht_6: 1276988340
-      folder_open_sprsht_7: -887419033
-      folder_open_sprsht_8: 1047637062
-      folder_open_sprsht_9: -1989951916
+      folder_openTWO_0: 525785293
+      folder_openTWO_1: -981391297
+      folder_openTWO_10: -668349296
+      folder_openTWO_11: 165539169
+      folder_openTWO_12: 1553608611
+      folder_openTWO_13: 1362002167
+      folder_openTWO_14: -439836703
+      folder_openTWO_15: -1801335519
+      folder_openTWO_16: 1945617178
+      folder_openTWO_2: 1444882885
+      folder_openTWO_3: 322393266
+      folder_openTWO_4: 1795099529
+      folder_openTWO_5: 845701058
+      folder_openTWO_6: 1350619005
+      folder_openTWO_7: -1688818843
+      folder_openTWO_8: -1839534350
+      folder_openTWO_9: 1003504724
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

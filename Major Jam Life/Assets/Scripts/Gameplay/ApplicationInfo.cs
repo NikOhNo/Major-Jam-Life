@@ -11,6 +11,9 @@ public class ApplicationInfo : MonoBehaviour
     ApplicantInfoSO applicantInfo;
 
     [SerializeField]
+    string sketchName;
+
+    [SerializeField]
     Sprite sketch;
 
     [SerializeField]
@@ -21,6 +24,7 @@ public class ApplicationInfo : MonoBehaviour
 
     public List<DialogueEntry> IntroDialogue { get => introDialogue; }
     public ApplicantInfoSO ApplicantInfo { get => applicantInfo; }
+    public string SketchName { get => sketchName; }
     public Sprite Sketch { get => sketch; }
     public List<BulletPoint> BulletPoints { get => bulletPoints; }
     public List<Question> Questions { get => questions; }

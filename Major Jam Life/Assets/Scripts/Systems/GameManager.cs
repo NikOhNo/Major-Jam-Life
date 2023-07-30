@@ -8,6 +8,7 @@ using System.Linq;
 using System.Globalization;
 using Assets.Scripts;
 using UnityEngine.EventSystems;
+using Yarn.Unity;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,6 +29,9 @@ public class GameManager : MonoBehaviour
     ScoreManager scoreManager;
     GameplayCanvas gameplayCanvas;
 
+    private DialogueRunner dialogueRunner;
+    public string applicantNode; 
+
     private void Awake()
     {
         // Singleton pattern
@@ -44,6 +48,8 @@ public class GameManager : MonoBehaviour
             Instance = this;
             Initialize();
         }
+
+        dialogueRunner = FindObjectOfType<DialogueRunner>(); 
     }
 
     /// <summary>
@@ -104,5 +110,12 @@ public class GameManager : MonoBehaviour
             Debug.LogError("Could not find application for level");
         }
         gameplayCanvas.Initialize(scoreManager, levelApplication);
+
+        StartApplicationConversation();
+    }
+
+    void StartApplicationConversation()
+    {
+        dialogueRunner.StartDialogue(applicantNode);
     }
 }

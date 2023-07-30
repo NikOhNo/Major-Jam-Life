@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: Intelligence?
   possibleResponses:
-  - None
-  - Survival Instincts
   - Enlightened
-  expectedResponseIndex: 0
+  - Survival Instincts
+  - None

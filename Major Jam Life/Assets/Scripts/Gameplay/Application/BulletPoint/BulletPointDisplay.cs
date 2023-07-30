@@ -24,7 +24,7 @@ namespace Assets.Scripts.Gameplay
         {
             this.bulletPoint = bulletPoint;
 
-            tmpText.text = $"• {bulletPoint.PointInfo}";
+            tmpText.text = $"- {bulletPoint.PointInfo}";
             GetComponent<ResizeRectTransformToText>().Resize();
             // Subscribe to the dialogue manager to click
             //button.onClick.AddListener(() => FunctionToStartDialogue(bulletPoint.ClickDialogue));

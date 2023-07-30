@@ -11,6 +11,7 @@ namespace Assets.Scripts.Gameplay.Application.Question
         Button button;
         TMP_Text textDisplay;
         QuestionInfoSO questionInfo;
+        ResponderDisplay responderDisplay;
 
         int selectedResponseIndex;
 
@@ -20,26 +21,43 @@ namespace Assets.Scripts.Gameplay.Application.Question
             textDisplay = GetComponentInChildren<TMP_Text>();
         }
 
-        public void Initialize(QuestionInfoSO questionInfo, GameObject responder)
+        public void Initialize(QuestionInfoSO questionInfo, GameObject responderDisplayObject)
         {
             this.questionInfo = questionInfo;
 
             textDisplay.text = questionInfo.Question;
-            button.onClick.AddListener(() => DisplayResponder(this.questionInfo, responder));
+            this.responderDisplay = responderDisplayObject.GetComponent<ResponderDisplay>();
+            button.onClick.AddListener(() => ActivateResponder(this.questionInfo));
         }
 
-        public void DisplayResponder(QuestionInfoSO question, GameObject responder)
+        public void ActivateResponder(QuestionInfoSO question)
         {
             Debug.Log($"Displaying question: {question.Question}");
 
             // Activate panel
-            responder.SetActive(true);
+            responderDisplay.SetActive(true);
 
             // Create response buttons
-            foreach (string answer in question.PossibleResponses)
+            for (int i = 0; i < question.PossibleResponses.Count; i++)
             {
+                string currResponse = question.PossibleResponses[i];
+                int index = i;  // need to do this to avoid captured variable issue
+
                 // Assign index and add onclick to set selected to that
+                responderDisplay.CreateResponder(this, currResponse, index);
             }
+        }
+
+        public void SetSelectedResponse(int index)
+        {
+            Debug.Log($"Chose response: {questionInfo.PossibleResponses[index]}");
+
+            // Set selected
+            selectedResponseIndex = index;
+
+            // Clear and hide the responder
+            responderDisplay.ClearAllResponders();
+            responderDisplay.SetActive(false);
         }
     }
 }

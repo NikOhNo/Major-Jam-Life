@@ -12,10 +12,6 @@ public class QuestionInfoSO : ScriptableObject
     [SerializeField]
     List<string> possibleResponses;
 
-    [SerializeField]
-    int expectedResponseIndex;
-
     public string Question { get => question; }
     public List<string> PossibleResponses { get => possibleResponses; }
-    public int ExpectedResponseIndex { get => expectedResponseIndex; }
 }

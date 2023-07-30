@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Yarn.Unity;
 
 [RequireComponent(typeof(Animator), typeof(CanvasGroup))]
 public class ApplicationDisplay : MonoBehaviour, IDisplay
@@ -49,10 +50,14 @@ public class ApplicationDisplay : MonoBehaviour, IDisplay
 
     Submission submission;
 
+    private DialogueRunner dialogueRunner;
+    private int scriptCounter = 0;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
         canvasGroup = GetComponent<CanvasGroup>();
+        dialogueRunner = FindObjectOfType<DialogueRunner>();
     }
 
     public void Initialize(ApplicationInfo applicationInfo)
@@ -121,7 +126,17 @@ public class ApplicationDisplay : MonoBehaviour, IDisplay
         {
             BulletPointDisplay newBPDisplay = Instantiate(bulletPointPrefab, bulletPointContainer.transform).GetComponent<BulletPointDisplay>();
             newBPDisplay.Initialize(bpInfo);
+
+            string scriptName = dialogueRunner.yarnProject.NodeNames[scriptCounter];
+            //button.onClick.AddListener(StartDescription(scriptName));
+            newBPDisplay.button.onClick.AddListener(delegate {StartDescription(scriptName); });
+            scriptCounter++;
         }
+    }
+
+    void StartDescription(string scriptName)
+    {
+        dialogueRunner.StartDialogue(scriptName);
     }
 
     public void ShowApplication()

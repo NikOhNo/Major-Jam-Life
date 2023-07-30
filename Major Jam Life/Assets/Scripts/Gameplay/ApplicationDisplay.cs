@@ -4,14 +4,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Animator), typeof(Image), typeof(CanvasGroup))]
+[RequireComponent(typeof(Animator), typeof(CanvasGroup))]
 public class ApplicationDisplay : MonoBehaviour, IDisplay
 {
-    public GameObject descriptionButton;
-    public GameObject descriptionLocation;
+    [SerializeField]
+    float timeToFade = 0.5f;
+
+    [SerializeField]
+    Image animalImage;
+
+    [SerializeField]
+    GameObject bulletPointContainer;
+
+    [SerializeField]
+    GameObject bulletPointPrefab;
 
     Animator animator;
-    Image image;
     CanvasGroup canvasGroup;
 
     ApplicationInfo applicationInfo;
@@ -19,13 +27,47 @@ public class ApplicationDisplay : MonoBehaviour, IDisplay
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        image = GetComponent<Image>();
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
     public void Initialize(ApplicationInfo applicationInfo)
     {
         this.applicationInfo = applicationInfo;
+    }
+    public void SetUpApplication()
+    {
+        // Give sketch
+        animalImage.sprite = applicationInfo.Sketch;
+
+        // Instantiate bullet points
+        CreateBulletPoints();
+
+        // Instantiate questions
+
+        // Fade in the panel
+        StartCoroutine(FadeInInfo(timeToFade));
+    }
+
+    IEnumerator FadeInInfo(float timeToFade)
+    {
+        float timeElapsed = 0f;
+
+        canvasGroup.alpha = 0f;
+        while (timeElapsed < timeToFade)
+        {
+            timeElapsed += Time.deltaTime;
+            canvasGroup.alpha = Mathf.Lerp(0f, 1f, timeElapsed / timeToFade);
+            yield return null;
+        }
+        canvasGroup.alpha = 1f;
+    }
+
+    public void CreateBulletPoints()
+    {
+        foreach (BulletPoint p in applicationInfo.BulletPoints)
+        {
+            Instantiate(bulletPointPrefab, bulletPointContainer.transform);
+        }
     }
 
     public void ShowApplication()

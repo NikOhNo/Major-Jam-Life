@@ -261,6 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   introDialogue: []
   applicantInfo: {fileID: 11400000, guid: 34a587aa6d408424993740d88a3049e7, type: 2}
+  sketchName: 
   sketch: {fileID: 0}
   bulletPoints: []
   questions: []

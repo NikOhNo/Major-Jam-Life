@@ -73,11 +73,6 @@ public class ApplicationDisplay : MonoBehaviour, IDisplay
     public void ShowApplication()
     {
         animator.SetBool("Open", true);
-
-        for ( int i = 0; i < 4; i++ )
-        {
-            Instantiate(descriptionButton, descriptionLocation.transform);
-        }
     }
 
     public void HideApplication()

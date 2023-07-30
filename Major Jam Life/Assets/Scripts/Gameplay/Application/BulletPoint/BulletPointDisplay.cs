@@ -27,7 +27,7 @@ namespace Assets.Scripts.Gameplay
             tmpText.text = $"• {bulletPoint.PointInfo}";
             GetComponent<ResizeRectTransformToText>().Resize();
             // Subscribe to the dialogue manager to click
-            // button.onClick.AddListener(() => FunctionToStartDialogue(bulletPoint.ClickDialogue));
+            //button.onClick.AddListener(() => FunctionToStartDialogue(bulletPoint.ClickDialogue));
         }
     }
 }

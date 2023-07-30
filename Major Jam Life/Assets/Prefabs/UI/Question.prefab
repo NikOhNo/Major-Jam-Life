@@ -93,8 +93,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -147,10 +147,9 @@ GameObject:
   - component: {fileID: 6545102389448724953}
   - component: {fileID: 6006857945413597775}
   - component: {fileID: 1813135427514562232}
-  - component: {fileID: 6523189075002095934}
-  - component: {fileID: 4869957237006055360}
+  - component: {fileID: 3856840678560319807}
   m_Layer: 5
-  m_Name: Bullet Point
+  m_Name: Question
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,7 +258,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6523189075002095934
+--- !u!114 &3856840678560319807
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,20 +267,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1476111058565769597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9de49a0b02bf6f843b3bc0c716784e3f, type: 3}
+  m_Script: {fileID: 11500000, guid: a8a56bf514e5c794cb56d7913af293b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4869957237006055360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1476111058565769597}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0ad89d3475577b4687458eed3bd0ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rt: {fileID: 2174740739066870579}
-  text: {fileID: 4406427936042503456}

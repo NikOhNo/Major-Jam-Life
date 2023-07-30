@@ -37,8 +37,11 @@ namespace Assets.Scripts
 
             scoreManager.ScoreChanged.AddListener(scoreDisplay.UpdateScore);
             scoreDisplay.UpdateScore(scoreManager.Score);
+
             characterDisplay.Initialize(applicationInfo.ApplicantInfo);
             characterDisplay.ShowDisplay();
+
+            applicationDisplay.Initialize(applicationInfo);
         }
 
         public void SetInteractable(bool enabled)

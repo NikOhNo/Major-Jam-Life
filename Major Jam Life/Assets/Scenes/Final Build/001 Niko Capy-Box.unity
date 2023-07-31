@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4b911f4e4aa694409c75ec3d3223897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shouldApprove: 1
   introDialogue: []
   applicantInfo: {fileID: 11400000, guid: 34a587aa6d408424993740d88a3049e7, type: 2}
   sketchInfo: {fileID: 11400000, guid: cfee95275158aa247bd9ef89286f7468, type: 2}
@@ -270,7 +271,16 @@ MonoBehaviour:
   - pointInfo: yes
     clickDialogue: []
   questions:
-  - {fileID: 11400000, guid: b1d3057f0ab3e9448a5e130276661fa7, type: 2}
+  - questionInfoSO: {fileID: 11400000, guid: b1d3057f0ab3e9448a5e130276661fa7, type: 2}
+    correctIndex: 1
+  - questionInfoSO: {fileID: 11400000, guid: 8ffcf05fda67dab468fae6a52ba729ef, type: 2}
+    correctIndex: 1
+  - questionInfoSO: {fileID: 11400000, guid: bb13a91e5dc431d47b030d9e324e128a, type: 2}
+    correctIndex: 1
+  - questionInfoSO: {fileID: 11400000, guid: 2da50e68ce10e714d82ba0ee30e150b6, type: 2}
+    correctIndex: 1
+  - questionInfoSO: {fileID: 11400000, guid: 9fb0dce2a337116408724d00bbe32275, type: 2}
+    correctIndex: 1
 --- !u!1001 &1710716446
 PrefabInstance:
   m_ObjectHideFlags: 0

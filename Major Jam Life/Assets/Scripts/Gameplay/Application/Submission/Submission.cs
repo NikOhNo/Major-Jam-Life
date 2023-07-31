@@ -7,6 +7,6 @@ namespace Assets.Scripts.Gameplay.Application.Submission
     public class Submission
     {
         public bool Approved { get; set;}
-        public List<Answer> Answers { get; set;}
+        public List<QuestionResult> Results { get; set;}
     }
 }

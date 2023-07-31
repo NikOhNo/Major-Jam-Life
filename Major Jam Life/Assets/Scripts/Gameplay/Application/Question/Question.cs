@@ -8,9 +8,14 @@ namespace Assets.Scripts.Gameplay.Application.Question
     [RequireComponent(typeof(Button))]
     public class Question : MonoBehaviour
     {
+        [SerializeField]
+        TMP_Text questionText;
+
+        [SerializeField]
+        TMP_Text selectedText;
+
         Button button;
-        TMP_Text textDisplay;
-        QuestionInfoSO questionInfo;
+        QuestionAnswerPair questionAnswerPair;
         ResponderDisplay responderDisplay;
 
         int selectedResponseIndex;
@@ -18,16 +23,16 @@ namespace Assets.Scripts.Gameplay.Application.Question
         private void Awake()
         {
             button = GetComponent<Button>();
-            textDisplay = GetComponentInChildren<TMP_Text>();
+            selectedText.text = "";
         }
 
-        public void Initialize(QuestionInfoSO questionInfo, GameObject responderDisplayObject)
+        public void Initialize(QuestionAnswerPair questionAnswerPair, GameObject responderDisplayObject)
         {
-            this.questionInfo = questionInfo;
+            this.questionAnswerPair = questionAnswerPair;
 
-            textDisplay.text = questionInfo.Question;
+            questionText.text = this.questionAnswerPair.QuestionInfoSO.Question;
             this.responderDisplay = responderDisplayObject.GetComponent<ResponderDisplay>();
-            button.onClick.AddListener(() => ActivateResponder(this.questionInfo));
+            button.onClick.AddListener(() => ActivateResponder(questionAnswerPair.QuestionInfoSO));
         }
 
         public void ActivateResponder(QuestionInfoSO question)
@@ -50,14 +55,27 @@ namespace Assets.Scripts.Gameplay.Application.Question
 
         public void SetSelectedResponse(int index)
         {
-            Debug.Log($"Chose response: {questionInfo.PossibleResponses[index]}");
+            string chosenResponse = questionAnswerPair.QuestionInfoSO.PossibleResponses[index];
+            Debug.Log($"Chose response: {chosenResponse}");
 
             // Set selected
             selectedResponseIndex = index;
 
+            // Display selected
+            selectedText.text = chosenResponse;
+
             // Clear and hide the responder
             responderDisplay.ClearAllResponders();
             responderDisplay.SetActive(false);
+        }
+
+        public QuestionResult GetResult()
+        {
+            return new QuestionResult()
+            {
+                IsCorrect = selectedResponseIndex == questionAnswerPair.CorrectIndex,
+                Response = questionAnswerPair.QuestionInfoSO.PossibleResponses[selectedResponseIndex]
+            };
         }
     }
 }

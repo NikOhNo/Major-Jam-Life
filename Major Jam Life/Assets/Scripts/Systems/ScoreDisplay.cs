@@ -18,7 +18,7 @@ namespace Assets.Scripts.Systems
 
         public void UpdateScore(int newScore)
         {
-            UpdateText($"Score: {newScore}");
+            UpdateText($"{newScore}");
         }
 
         private void UpdateText(string newText)

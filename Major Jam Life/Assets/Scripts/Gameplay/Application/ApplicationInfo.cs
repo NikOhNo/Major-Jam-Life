@@ -5,6 +5,9 @@ using UnityEngine;
 public class ApplicationInfo : MonoBehaviour
 {
     [SerializeField]
+    bool shouldApprove;
+
+    [SerializeField]
     List<DialogueEntry> introDialogue;
 
     [SerializeField]
@@ -17,11 +20,12 @@ public class ApplicationInfo : MonoBehaviour
     List<BulletPoint> bulletPoints;
 
     [SerializeField]
-    List<QuestionInfoSO> questions;
+    List<QuestionAnswerPair> questions;
 
+    public bool ShouldApprove { get => shouldApprove; }
     public List<DialogueEntry> IntroDialogue { get => introDialogue; }
     public ApplicantInfoSO ApplicantInfo { get => applicantInfo; }
     public SketchInfoSO SketchInfo { get => sketchInfo; }
     public List<BulletPoint> BulletPoints { get => bulletPoints; }
-    public List<QuestionInfoSO> Questions { get => questions; }
+    public List<QuestionAnswerPair> Questions { get => questions; }
 }

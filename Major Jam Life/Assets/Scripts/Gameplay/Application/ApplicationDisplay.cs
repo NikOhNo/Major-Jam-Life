@@ -60,7 +60,7 @@ public class ApplicationDisplay : MonoBehaviour, IDisplay
         animator = GetComponent<Animator>();
         canvasGroup = GetComponent<CanvasGroup>();
         dialogueRunner = FindObjectOfType<DialogueRunner>();
-        sm = GetComponent<SoundManager>();
+        sm = FindObjectOfType<SoundManager>();
     }
 
     public void Initialize(ApplicationInfo applicationInfo)

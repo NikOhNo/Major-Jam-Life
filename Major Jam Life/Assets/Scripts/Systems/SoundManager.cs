@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    private AudioSource sounds;
+    private AudioSource audioSource;
 
     public AudioClip clickSFX;
     public AudioClip paperSound;
@@ -16,10 +16,9 @@ public class SoundManager : MonoBehaviour
     public AudioClip menuTheme;
     public AudioClip levelTheme;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        sounds = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void PlayClickSFX()
@@ -59,15 +58,15 @@ public class SoundManager : MonoBehaviour
 
     public void PlayMenuTheme()
     {
-        sounds.clip = menuTheme;
-        sounds.loop = true;
-        sounds.Play(); 
+        audioSource.clip = menuTheme;
+        audioSource.loop = true;
+        audioSource.Play(); 
     }
 
     public void PlayLevelTheme()
     {
-        sounds.clip = levelTheme;
-        sounds.loop = true;
-        sounds.Play();
+        audioSource.clip = levelTheme;
+        audioSource.loop = true;
+        audioSource.Play();
     }
 }

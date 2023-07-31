@@ -59,8 +59,8 @@ public class GameManager : MonoBehaviour
             Initialize();
         }
 
-        dialogueRunner = FindObjectOfType<DialogueRunner>(); 
-        sm = GetComponent<SoundManager>();
+        dialogueRunner = FindObjectOfType<DialogueRunner>();
+        sm = GetComponentInChildren<SoundManager>();
     }
 
     /// <summary>
@@ -201,6 +201,9 @@ public class GameManager : MonoBehaviour
 
     void StartApplicationConversation()
     {
-        dialogueRunner.StartDialogue(applicantNode);
+        if (applicantNode != null || applicantNode != "")
+        {
+            dialogueRunner.StartDialogue(applicantNode);
+        }
     }
 }

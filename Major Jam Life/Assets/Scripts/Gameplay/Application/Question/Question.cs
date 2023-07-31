@@ -67,6 +67,8 @@ namespace Assets.Scripts.Gameplay.Application.Question
             // Clear and hide the responder
             responderDisplay.ClearAllResponders();
             responderDisplay.SetActive(false);
+
+            FindObjectOfType<SoundManager>().PlayPencilScribble();
         }
 
         public QuestionResult GetResult()

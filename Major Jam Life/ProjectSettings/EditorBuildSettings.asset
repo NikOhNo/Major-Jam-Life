@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Final Build/Main Menu.unity
+    path: Assets/Scenes/Final Build/Menus/Main Menu.unity
     guid: 61bdf40fb0a30c048870b4da505be518
   - enabled: 1
-    path: Assets/Scenes/Final Build/001 Niko Capy-Box.unity
+    path: Assets/Scenes/Final Build/Levels/001 Niko Capy-Box.unity
     guid: 6249dcd02a4142040a2dd6b84329c0c8
   - enabled: 1
-    path: Assets/Scenes/Final Build/Credits.unity
+    path: Assets/Scenes/Final Build/Menus/Credits.unity
     guid: 4fa0528591d394949bd376f6ac3a5d19
   m_configObjects: {}

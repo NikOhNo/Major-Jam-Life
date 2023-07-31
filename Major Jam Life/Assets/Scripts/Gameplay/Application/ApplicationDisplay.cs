@@ -70,6 +70,7 @@ public class ApplicationDisplay : MonoBehaviour, IDisplay
         approveButton.onClick.AddListener(() => OnApprove());
         denyButton.onClick.AddListener(() => OnDeny());
         submitButton.onClick.AddListener(() => OnSubmit());
+        submitButton.gameObject.SetActive(false);
     }
 
     public void SetUpApplication()
@@ -82,12 +83,18 @@ public class ApplicationDisplay : MonoBehaviour, IDisplay
         CreateBulletPoints();
 
         // Instantiate questions
-        questionDisplay.Initialize(applicationInfo, submission);
+        questionDisplay.Initialize(applicationInfo);
+    }
+
+    public void ShowGrade()
+    {
+        GameManager.Instance.EnableGradeDisplay();
     }
 
     public void OnApprove()
     {
         submission.Approved = true;
+        submitButton.gameObject.SetActive(true);
 
         // Display thumbs up
         approvalDisplay.ShowApproved(approveButton.GetComponent<RectTransform>());
@@ -96,6 +103,7 @@ public class ApplicationDisplay : MonoBehaviour, IDisplay
     public void OnDeny() 
     {
         submission.Approved = false;
+        submitButton.gameObject.SetActive(true);
 
         // Display thumbs down
         approvalDisplay.ShowDenied(denyButton.GetComponent<RectTransform>());
@@ -103,7 +111,11 @@ public class ApplicationDisplay : MonoBehaviour, IDisplay
 
     public void OnSubmit()
     {
+        // Get results
+        submission.Results = questionDisplay.GetResults();
+
         // TODO: give submission to game manager or grader
+        GameManager.Instance.GiveSubmission(submission);
     }
 
     IEnumerator FadeInInfo(float timeToFade)

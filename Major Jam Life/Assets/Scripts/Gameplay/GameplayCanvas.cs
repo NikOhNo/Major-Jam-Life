@@ -15,10 +15,16 @@ namespace Assets.Scripts
         ScoreDisplay scoreDisplay;
 
         [SerializeField]
-        ApplicationDisplay applicationDisplay;
+        public ApplicationDisplay applicationDisplay;
 
         [SerializeField]
-        ApplicantDisplay characterDisplay;
+        public GameObject paperHold;
+
+        [SerializeField]
+        public ApplicantDisplay characterDisplay;
+
+        [SerializeField]
+        public GradeDisplay gradeDisplay;
 
         // Cached References
         CanvasGroup canvasGroup;
@@ -26,6 +32,7 @@ namespace Assets.Scripts
         private void Awake()
         {
             canvasGroup = GetComponent<CanvasGroup>();
+            gradeDisplay.gameObject.SetActive(false);
         }
 
         public void Initialize(ScoreManager scoreManager, ApplicationInfo applicationInfo)

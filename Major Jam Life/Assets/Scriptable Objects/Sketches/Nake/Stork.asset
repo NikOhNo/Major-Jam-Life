@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10a9fb817b3de474d826130d32a1ecb2, type: 3}
-  m_Name: Intestines
+  m_Name: Stork
   m_EditorClassIdentifier: 
-  sketchName: Intestines
-  sketch: {fileID: 21300000, guid: 7dc8b635f80791249a6f0a7019653300, type: 3}
+  sketchName: Stork(?)
+  sketch: {fileID: 21300000, guid: f8ae819fe44b0d5479b3aea968afe8e5, type: 3}

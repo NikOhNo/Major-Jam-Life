@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour
     private DialogueRunner dialogueRunner;
     public string applicantNode; 
 
+    private SoundManager sm;
+
     private void Awake()
     {
         // Singleton pattern
@@ -58,6 +60,7 @@ public class GameManager : MonoBehaviour
         }
 
         dialogueRunner = FindObjectOfType<DialogueRunner>(); 
+        sm = GetComponent<SoundManager>();
     }
 
     /// <summary>
@@ -161,10 +164,12 @@ public class GameManager : MonoBehaviour
             Debug.Log($"Loaded Level: {result}");
 
             CreateLevel();
+            sm.PlayLevelTheme();
         }
         else
         {
             Debug.Log($"Loaded Non-Level: {scene.name}");
+            sm.PlayMenuTheme();
         }
     }
 

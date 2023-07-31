@@ -53,11 +53,14 @@ public class ApplicationDisplay : MonoBehaviour, IDisplay
     private DialogueRunner dialogueRunner;
     private int scriptCounter = 0;
 
+    private SoundManager sm;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
         canvasGroup = GetComponent<CanvasGroup>();
         dialogueRunner = FindObjectOfType<DialogueRunner>();
+        sm = GetComponent<SoundManager>();
     }
 
     public void Initialize(ApplicationInfo applicationInfo)
@@ -142,6 +145,7 @@ public class ApplicationDisplay : MonoBehaviour, IDisplay
             string scriptName = dialogueRunner.yarnProject.NodeNames[scriptCounter];
             //button.onClick.AddListener(StartDescription(scriptName));
             newBPDisplay.button.onClick.AddListener(delegate {StartDescription(scriptName); });
+            newBPDisplay.button.onClick.AddListener(() => sm.PlayClickSFX());
             scriptCounter++;
         }
     }
@@ -154,6 +158,7 @@ public class ApplicationDisplay : MonoBehaviour, IDisplay
     public void ShowApplication()
     {
         animator.SetBool("Open", true);
+        sm.PlayPaperSound();
     }
 
     public void HideApplication()

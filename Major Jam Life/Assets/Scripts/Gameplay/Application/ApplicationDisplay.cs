@@ -101,6 +101,8 @@ public class ApplicationDisplay : MonoBehaviour, IDisplay
 
         // Display thumbs up
         approvalDisplay.ShowApproved(approveButton.GetComponent<RectTransform>());
+
+        sm.PlayStampSFX();
     }
 
     public void OnDeny() 
@@ -110,6 +112,8 @@ public class ApplicationDisplay : MonoBehaviour, IDisplay
 
         // Display thumbs down
         approvalDisplay.ShowDenied(denyButton.GetComponent<RectTransform>());
+
+        sm.PlayStampSFX();
     }
 
     public void OnSubmit()
@@ -119,6 +123,8 @@ public class ApplicationDisplay : MonoBehaviour, IDisplay
 
         // TODO: give submission to game manager or grader
         GameManager.Instance.GiveSubmission(submission);
+
+        sm.PlayPaperSound();
     }
 
     IEnumerator FadeInInfo(float timeToFade)

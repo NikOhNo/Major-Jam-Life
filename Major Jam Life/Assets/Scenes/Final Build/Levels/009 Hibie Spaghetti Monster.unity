@@ -261,25 +261,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shouldApprove: 1
   introDialogue: []
-  applicantInfo: {fileID: 11400000, guid: 90d4ccfe3c68b4e419c0c6e848d56422, type: 2}
-  sketchInfo: {fileID: 11400000, guid: 0bce46d00f2fe794f8d08987c5066284, type: 2}
+  applicantInfo: {fileID: 11400000, guid: 030b5af9ecf23ae468e52ac4289157ed, type: 2}
+  sketchInfo: {fileID: 11400000, guid: 781ff4d9c8f42b04298f879d5fb4fcae, type: 2}
   bulletPoints:
-  - pointInfo: Gotta go fast!
+  - pointInfo: Just a cute little guy!
     clickDialogue: []
-  - pointInfo: Just a bunny with shoes
+  - pointInfo: Aww I love him so much
     clickDialogue: []
-  - pointInfo: Only eats carrots
+  - pointInfo: But whatever you do, do not feed them meat
     clickDialogue: []
   questions:
-  - questionInfoSO: {fileID: 11400000, guid: b1d3057f0ab3e9448a5e130276661fa7, type: 2}
-    correctIndex: 0
-  - questionInfoSO: {fileID: 11400000, guid: 2da50e68ce10e714d82ba0ee30e150b6, type: 2}
-    correctIndex: 2
-  - questionInfoSO: {fileID: 11400000, guid: 9fb0dce2a337116408724d00bbe32275, type: 2}
-    correctIndex: 1
-  - questionInfoSO: {fileID: 11400000, guid: bb13a91e5dc431d47b030d9e324e128a, type: 2}
-    correctIndex: 1
   - questionInfoSO: {fileID: 11400000, guid: 8ffcf05fda67dab468fae6a52ba729ef, type: 2}
+    correctIndex: 0
+  - questionInfoSO: {fileID: 11400000, guid: bb13a91e5dc431d47b030d9e324e128a, type: 2}
+    correctIndex: 0
+  - questionInfoSO: {fileID: 11400000, guid: 9fb0dce2a337116408724d00bbe32275, type: 2}
+    correctIndex: 3
+  - questionInfoSO: {fileID: 11400000, guid: 2da50e68ce10e714d82ba0ee30e150b6, type: 2}
+    correctIndex: 0
+  - questionInfoSO: {fileID: 11400000, guid: b1d3057f0ab3e9448a5e130276661fa7, type: 2}
     correctIndex: 0
 --- !u!1001 &1710716446
 PrefabInstance:
